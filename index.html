@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>연금부자 플래너</title>
+<meta name="description" content="《박곰희 연금 부자 수업》 방식으로 연금 수령액을 시뮬레이션하고, 투자 스타일별 ETF·펀드를 고르고, 수익을 추적하는 앱">
+<meta name="theme-color" content="#2f6fed">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="연금플래너">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <div class="logo">연</div>
+  <div class="brand"><b>연금부자 플래너</b><small>《박곰희 연금 부자 수업》 방식</small></div>
+  <nav class="tabs" id="tabs">
+    <button data-tab="sim" class="on"><svg class="ic" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 20h18M5 16l5-5 4 3 6-7"/></svg>시뮬레이션</button>
+    <button data-tab="style"><svg class="ic" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"/><path d="M12 4v8l6 4"/></svg>투자 스타일</button>
+    <button data-tab="track"><svg class="ic" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>내 투자</button>
+    <button data-tab="guide"><svg class="ic" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5"/></svg>가이드</button>
+  </nav>
+</div></header>
+<main>
+  <section class="view on" id="v-sim"></section>
+  <section class="view" id="v-style"></section>
+  <section class="view" id="v-track"></section>
+  <section class="view" id="v-guide"></section>
+  <p class="foot">책 내용을 바탕으로 한 계산 도구이며 투자 권유가 아닙니다. 세법·상품은 바뀔 수 있으니 실행 전 증권사·국세청 자료로 확인하세요. 데이터는 이 기기 브라우저에만 저장됩니다.</p>
+</main>
+<script src="data.js"></script>
+<script src="sim.js"></script>
+<script src="charts.js"></script>
+<script src="app.js"></script>
+<script>if('serviceWorker' in navigator && location.protocol==='https:'){navigator.serviceWorker.register('sw.js');}</script>
+</body>
+</html>
